@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  jupyter:
+    image: jupyter/base-notebook
+    volumes:
+      - jupyter_data:/home/jovyan/work
+    ports:
+      - "8888:8888"
+
+volumes:
+  jupyter_data:
+    driver: local
